@@ -20,11 +20,11 @@ INSTALL_DIR=""
 SUDO=""
 
 
-if command -v sudo > /dev/null && [ "$(id -u)" -ne 0 ]; then
-    SUDO="sudo"
-elif command -v doas > /dev/null && [ "$(id -u)" -ne 0 ]; then
-    SUDO="doas"
-fi
+# if command -v sudo > /dev/null && [ "$(id -u)" -ne 0 ]; then
+#     SUDO="sudo"
+# elif command -v doas > /dev/null && [ "$(id -u)" -ne 0 ]; then
+#     SUDO="doas"
+# fi
 
 if [ -z ${NETBIRD_RELEASE+x} ]; then
     NETBIRD_RELEASE=latest
