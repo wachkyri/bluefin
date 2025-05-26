@@ -1,5 +1,6 @@
 # This code is based on the netbird-installer contribution by physk on GitHub.
 # Source: https://github.com/physk/netbird-installer
+# https://github.com/netbirdio/netbird/blob/main/release_files/install.sh 
 # Date: 26/05/2024
 set -e
 
@@ -262,18 +263,18 @@ install_netbird() {
         fi
     ;;
     dnf)
-        add_rpm_repo
-        ${SUDO} dnf -y install dnf-plugin-config-manager
-        if [[ "$(dnf --version | head -n1 | cut -d. -f1)" > "4" ]];
+#         add_rpm_repo
+        ${SUDO} dnf5 -y install dnf-plugin-config-manager
+        if [[ "$(dnf5 --version | head -n1 | cut -d. -f1)" > "4" ]];
         then
-          ${SUDO} dnf config-manager addrepo --from-repofile=/etc/yum.repos.d/netbird.repo
+          ${SUDO} dnf5 config-manager addrepo --from-repofile=/etc/yum.repos.d/netbird.repo
         else
-          ${SUDO} dnf config-manager --add-repo /etc/yum.repos.d/netbird.repo
+          ${SUDO} dnf5 config-manager --add-repo /etc/yum.repos.d/netbird.repo
         fi
-        ${SUDO} dnf -y install netbird
+        ${SUDO} dnf5 -y install netbird
 
         if ! $SKIP_UI_APP; then
-            ${SUDO} dnf -y install netbird-ui
+            ${SUDO} dnf5 -y install netbird-ui
         fi
     ;;
     rpm-ostree)
@@ -455,7 +456,7 @@ if type uname >/dev/null 2>&1; then
                   echo "The installation will be performed using apt package manager"
               elif [ -x "$(command -v dnf)" ]; then
                   PACKAGE_MANAGER="dnf"
-                  echo "The installation will be performed using dnf package manager"
+                  echo "The installation will be performed using dnf5 package manager"
               elif [ -x "$(command -v rpm-ostree)" ]; then
                   PACKAGE_MANAGER="rpm-ostree"
                   echo "The installation will be performed using rpm-ostree package manager"
