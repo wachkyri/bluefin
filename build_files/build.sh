@@ -20,7 +20,7 @@ set -ouex pipefail
 # dnf5 -y copr disable ublue-os/staging
 
 # Installing Netbird
-/ctx/netbird-install.sh --quiet
+/ctx/netbird-install.sh
 
 #### Example for enabling a System Unit File
 

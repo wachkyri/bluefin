@@ -345,14 +345,14 @@ install_netbird() {
     echo "package_manager=$PACKAGE_MANAGER" | ${SUDO} tee "$CONFIG_FILE" > /dev/null
 
     # Load and start netbird service
-    if [ "$PACKAGE_MANAGER" != "rpm-ostree" ] && [ "$PACKAGE_MANAGER" != "pkg" ]; then
-        if ! ${SUDO} netbird service install 2>&1; then
-            echo "NetBird service has already been loaded"
-        fi
-        if ! ${SUDO} netbird service start 2>&1; then
-            echo "NetBird service has already been started"
-        fi
-    fi
+    # if [ "$PACKAGE_MANAGER" != "rpm-ostree" ] && [ "$PACKAGE_MANAGER" != "pkg" ]; then
+    #     if ! ${SUDO} netbird service install 2>&1; then
+    #         echo "NetBird service has already been loaded"
+    #     fi
+    #     if ! ${SUDO} netbird service start 2>&1; then
+    #         echo "NetBird service has already been started"
+    #     fi
+    # fi
 
 
     echo "Installation has been finished. To connect, you need to run NetBird by executing the following command:"
