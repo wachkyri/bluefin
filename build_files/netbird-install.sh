@@ -263,14 +263,14 @@ install_netbird() {
         fi
     ;;
     dnf)
-#         add_rpm_repo
+        add_rpm_repo
         ${SUDO} dnf5 -y install dnf-plugin-config-manager
-        if [[ "$(dnf5 --version | head -n1 | cut -d. -f1)" > "4" ]];
-        then
-          ${SUDO} dnf5 config-manager addrepo --from-repofile=/etc/yum.repos.d/netbird.repo
-        else
-          ${SUDO} dnf5 config-manager --add-repo /etc/yum.repos.d/netbird.repo
-        fi
+        # if [[ "$(dnf5 --version | head -n1 | cut -d. -f1)" > "4" ]];
+        # then
+        #   ${SUDO} dnf5 config-manager addrepo --from-repofile=/etc/yum.repos.d/netbird.repo
+        # else
+        #   ${SUDO} dnf5 config-manager --add-repo /etc/yum.repos.d/netbird.repo
+        # fi
         ${SUDO} dnf5 -y install netbird
 
         if ! $SKIP_UI_APP; then
