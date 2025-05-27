@@ -22,6 +22,10 @@ set -ouex pipefail
 # Installing Netbird
 /ctx/netbird-install.sh
 
+# Install Mullvad
+dnf5 config-manager addrepo --from-repofile=https://repository.mullvad.net/rpm/stable/mullvad.repo
+dnf5 install mullvad-vpn
+
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
