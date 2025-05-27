@@ -23,6 +23,7 @@ set -ouex pipefail
 /ctx/netbird-install.sh
 
 # Install Mullvad
+mkdir "/opt/Mullvad VPN"
 dnf5 config-manager addrepo --from-repofile=https://repository.mullvad.net/rpm/stable/mullvad.repo
 dnf5 -y install mullvad-vpn
 
