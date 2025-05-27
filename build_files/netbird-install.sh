@@ -5,7 +5,7 @@ set -ouex pipefail
 # Add NetBird repo
 echo "Adding NetBird repository"
 
-cat <<-EOF | ${SUDO} tee /etc/yum.repos.d/netbird.repo
+cat <<-EOF | tee /etc/yum.repos.d/netbird.repo
 [NetBird]
 name=NetBird
 baseurl=https://pkgs.netbird.io/yum/
