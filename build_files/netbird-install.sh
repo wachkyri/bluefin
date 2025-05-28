@@ -18,4 +18,4 @@ EOF
 # Installing NetBird binary from repo
 echo "Installing NetBird"
 
-dnf5 -y install netbird
+dnf5 -y install netbird netbird-ui
