@@ -27,7 +27,7 @@ set -ouex pipefail
 # dnf5 config-manager addrepo --from-repofile=https://repository.mullvad.net/rpm/stable/mullvad.repo
 # dnf5 -y install mullvad-vpn
 curl --tlsv1.3 -fsS https://repository.mullvad.net/rpm/stable/mullvad.repo | tee /etc/yum.repos.d/mullvad.repo
-rpm-ostree update --install mullvad-vpn
+dnf5 -y install mullvad-vpn
 
 #### Example for enabling a System Unit File
 
