@@ -26,6 +26,10 @@ set -ouex pipefail
 # mkdir "/opt/Mullvad VPN"
 # dnf5 config-manager addrepo --from-repofile=https://repository.mullvad.net/rpm/stable/mullvad.repo
 # dnf5 -y install mullvad-vpn
+
+# Create symlink for /opt to /var/opt since it is not created in the image yet
+mkdir -p "/var/opt" && ln -s "/var/opt"  "/opt"
+
 curl --tlsv1.3 -fsS https://repository.mullvad.net/rpm/stable/mullvad.repo | tee /etc/yum.repos.d/mullvad.repo
 dnf5 -y install mullvad-vpn
 
