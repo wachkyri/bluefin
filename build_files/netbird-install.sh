@@ -17,4 +17,4 @@ EOF
 
 # Installing NetBird binary from repo
 echo "Installing NetBird"
-dnf5 -y install netbird libappindicator-gtk3 libappindicator netbird-ui gnome-shell-extension-appindicator`
+dnf5 -y install netbird libappindicator-gtk3 libappindicator netbird-ui gnome-shell-extension-appindicator
