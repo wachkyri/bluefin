@@ -36,18 +36,6 @@ dnf5 -y install mullvad-vpn
 # Direct TriliumNext 
 dnf5 -y install https://github.com/TriliumNext/Notes/releases/download/v0.93.0/TriliumNextNotes-v0.93.0-linux-x64.rpm
 
-# VSCode because it's still better for a lot of things
-tee /etc/yum.repos.d/vscode.repo <<'EOF'
-[code]
-name=Visual Studio Code
-baseurl=https://packages.microsoft.com/yumrepos/vscode
-enabled=1
-gpgcheck=1
-gpgkey=https://packages.microsoft.com/keys/microsoft.asc
-EOF
-
-dnf5 -y install code
-
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
