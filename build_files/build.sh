@@ -34,7 +34,7 @@ curl --tlsv1.3 -fsS https://repository.mullvad.net/rpm/stable/mullvad.repo | tee
 dnf5 -y install mullvad-vpn
 
 # Direct TriliumNext 
-dnf5 -y install https://github.com/TriliumNext/Notes/releases/download/v0.94.1/TriliumNextNotes-v0.95.0-linux-x64.rpm
+dnf5 -y install https://github.com/TriliumNext/Notes/releases/download/v0.95.0/TriliumNextNotes-v0.95.0-linux-x64.rpm
 
 #### Example for enabling a System Unit File
 
