@@ -1,0 +1,11 @@
+{
+  "regexManagers": [
+    {
+      "fileMatch": ["^build\\.sh$"],
+      "matchStrings": [
+        "https://github\\.com/(?<depName>[^/]+/[^/]+)/releases/download/v(?<currentValue>[^/]+)/"
+      ],
+      "datasourceTemplate": "github-releases"
+    }
+  ]
+}
