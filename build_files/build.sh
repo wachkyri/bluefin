@@ -37,9 +37,6 @@ dnf5 -y install mullvad-vpn
 # renovate: datasource=github-releases depName=TriliumNext/Trilium
 dnf5 -y install https://github.com/TriliumNext/Trilium/releases/download/v0.97.1/TriliumNotes-v0.97.1-linux-x64.rpm
 
-# Direct Touche
-dnf5 -y install https://github.com/JoseExposito/touchegg/releases/download/2.0.18/fedora34_touchegg-2.0.18-1.x86_64.rpm
-
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
