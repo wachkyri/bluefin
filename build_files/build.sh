@@ -35,7 +35,7 @@ dnf5 -y install mullvad-vpn
 
 # Direct TriliumNext 
 # renovate: datasource=github-releases depName=TriliumNext/Trilium
-dnf5 -y install https://github.com/TriliumNext/Trilium/releases/download/v0.97.1/TriliumNotes-v0.97.1-linux-x64.rpm
+dnf5 -y install https://github.com/TriliumNext/Trilium/releases/download/v0.97.2/TriliumNotes-v0.97.2-linux-x64.rpm
 
 # Install merkura agenda not available as Flatpak
 dnf5 -y install merkuro
