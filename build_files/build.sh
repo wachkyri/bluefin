@@ -37,8 +37,8 @@ dnf5 -y install mullvad-vpn
 # renovate: datasource=github-releases depName=TriliumNext/Trilium
 dnf5 -y install https://github.com/TriliumNext/Trilium/releases/download/v0.97.2/TriliumNotes-v0.97.2-linux-x64.rpm
 
-# Install merkura agenda not available as Flatpak
-dnf5 -y install merkuro
+# Install merkura agenda not available as Flatpak| DISABLED: too much dependencies
+# dnf5 -y install merkuro
 
 #### Example for enabling a System Unit File
 
